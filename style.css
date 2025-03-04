@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #0f0f0f, #1a1a1a);
+    color: white;
+    overflow: hidden;
+}
+
+/* Container */
+.container {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 183, 255, 0.5);
+    backdrop-filter: blur(10px);
+    transition: 0.3s;
+}
+
+/* Floating Logo */
+.logo {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.floating {
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+h1 {
+    font-size: 28px;
+    font-weight: 600;
+}
+
+/* Animasi Fade-in */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 1s ease-out forwards;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+.description {
+    font-size: 14px;
+    margin: 10px 0;
+}
+
+/* Tombol */
+.buttons {
+    margin: 20px 0;
+}
+
+/* Style tombol */
+.btn {
+    display: block;
+    width: 300px; /* Lebih lebar */
+    padding: 14px; /* Lebih nyaman */
+    margin: 30px auto; /* Jarak antar tombol lebih besar */
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 18px; /* Sedikit lebih besar */
+    font-weight: 600;
+    transition: all 0.3s ease;
+    position: relative;
+    text-align: center;
+    background: #007BFF;
+    color: white;
+    box-shadow: 0 0 20px rgba(0, 183, 255, 0.7);
+}
+
+/* Efek Hover */
+.btn:hover {
+    transform: scale(1.1) rotate(2deg);
+    box-shadow: 0 0 30px rgba(0, 183, 255, 1);
+}
+
+/* Efek Pulse */
+.pulse {
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+/* Footer dengan animasi sparkle */
+.footer {
+    font-size: 14px;
+    margin-top: 20px;
+    opacity: 0.9;
+}
+
+.sparkle {
+    animation: sparkleEffect 1s infinite alternate;
+}
+
+@keyframes sparkleEffect {
+    0% { opacity: 1; transform: scale(1); }
+    100% { opacity: 0.6; transform: scale(1.2); }
+}
